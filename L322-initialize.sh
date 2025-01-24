@@ -9,7 +9,7 @@ gh auth login --with-token < ~/.git-token
 # Login to aio cli
 # ensure correct env used
 aio config set cli.env prod
-# perform login, should automatically
+# perform login, should automatically authenticate since lab machines are being pre-authenticated to experience.adobe.com (prod IMS) on browser.
 aio login
 
 # install mesh and commerce plugins
