@@ -11,7 +11,8 @@ aio telemetry off
 aio config set cli.env prod
 # perform login, should automatically authenticate since lab machines are being pre-authenticated to experience.adobe.com (prod IMS) on browser.
 #aio login
-# select the IMS org, this is "Adobe Commerce Extensibility", 0AD21DEB646C64020A495E65@AdobeOrg
+# select the IMS org.
+# for L322, this is "Adobe Commerce Extensibility", imsId: 0AD21DEB646C64020A495E65@AdobeOrg, id: 1244026
 aio console org select 1244026
 
 # install the mesh and commerce plugins
