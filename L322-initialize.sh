@@ -13,7 +13,7 @@ aio config set cli.env prod
 
 # install aio cli as well as the mesh and commerce plugins
 npm install -g @adobe/aio-cli
-aio plugins:install @adobe/aio-cli-plugin-api-mesh@4.0.1-beta.3
+aio plugins:install @adobe/aio-cli-plugin-api-mesh@4.1.0-beta.3
 aio plugins:install https://github.com/adobe-commerce/aio-cli-plugin-commerce
 
 # TODO validate aio installation
