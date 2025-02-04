@@ -11,7 +11,8 @@ aio config set cli.env prod
 # perform login, should automatically authenticate since lab machines are being pre-authenticated to experience.adobe.com (prod IMS) on browser.
 #aio login
 
-# install mesh and commerce plugins
+# install aio cli as well as the mesh and commerce plugins
+npm install -g @adobe/aio-cli
 aio plugins:install @adobe/aio-cli-plugin-api-mesh@4.0.1-beta.3
 aio plugins:install https://github.com/adobe-commerce/aio-cli-plugin-commerce
 
