@@ -19,7 +19,25 @@ aio console org select 1244026
 aio plugins:install @adobe/aio-cli-plugin-api-mesh@4.1.0-beta.3
 aio plugins:install https://github.com/adobe-commerce/aio-cli-plugin-commerce
 
-# TODO validate aio installation
-# such as IMS org used, plugins installed properly, etc.
+echo "Verifying installation..."
+if ! aio -v | grep '@adobe/aio-cli' > /dev/null; then
+  echo "AIO not installed"
+  exit 1
+fi
+
+if ! aio plugins | grep '@adobe/aio-cli-plugin-api-mesh' > /dev/null; then
+  echo "@adobe/aio-cli-plugin-api-mesh not installed!"
+  exit 1
+fi
+
+if ! aio plugins | grep '@adobe/aio-cli-plugin-commerce' > /dev/null; then
+  echo "@adobe/aio-cli-plugin-commerce not installed!"
+  exit 1
+fi
+
+if ! aio config get console.org | grep '1244026' > /dev/null; then
+  echo "Incorrect ORG selected. Please run 'aio console org select 1244026'"
+  exit 1
+fi
 
 echo "--- Setup complete ---"
