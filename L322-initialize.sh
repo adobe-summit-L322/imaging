@@ -13,8 +13,8 @@ aio config set cli.env prod
 aio login
 # select the IMS org.
 # for L322, this is "Commerce Extensibility Lab", imsId: 045013D3664331DC0A495CD5@AdobeOrg, id: 3117813
-# for L321, this is "?", imsId: ?, id: ?
-aio console org select 3117813
+# for L321, this is "Adobe Commerce Project Beacon", imsId: DEDB2A52641B1D460A495F8E@AdobeOrg, id: ?
+aio console org select ${ORG_ID}
 
 # install the mesh and commerce plugins
 aio plugins:install @adobe/aio-cli-plugin-api-mesh@4.1.0-beta.3
