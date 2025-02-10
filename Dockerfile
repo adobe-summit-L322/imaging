@@ -29,6 +29,9 @@ COPY --chmod=0755 L322-initialize.sh /L322-initialize.sh
 
 # Set environment variables
 ENV SEAT="YourSeat"
+# for L322, this is "Commerce Extensibility Lab", imsId: 045013D3664331DC0A495CD5@AdobeOrg, id: 3117813
+# for L321, this is "Adobe Commerce Project Beacon", imsId: DEDB2A52641B1D460A495F8E@AdobeOrg, id: ?
+ENV ORG_ID="3117813"
 
 # When running with GITHUB_TOKEN, gh cli will be automatically authenticated
 # Either pass with ENV:
